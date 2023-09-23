@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int num=456;//全局变量————定义在代码块（{}）外的变量
+//全局变量和局部变量的名字最好不要相同，相同时局部变量优先
+int main(void){
+    char ch='a';//char是字符类型
+    int n=123;//int是整型   局部变量————定义在代码块内的变量
+    //局部变量不可以在代码块以外使用
+    float f=1.23f;//float是单精度浮点型
+    double d=4.56;//double双精度浮点型
+    printf("%c\n",ch);//打印字符时用%c
+    printf("%d\n",n);//打印整型用%d   另外\n是转竖符相当于回车换行
+    printf("%f",f);//打印浮点数用%f（六位小数）  去掉\n则不再换行
+    printf(" %f\n",d);//虽然浮点数打印时都使用%f，但是因为数据类型不同，不可以一起打印
+    printf("%d\n",sizeof(char));//sizeof表示求变量大小——占多少字节
+    printf("%d\n",sizeof(int));
+    printf("%d\n",sizeof(long));
+    printf("%d\n",sizeof(float));
+    printf("%d\n",sizeof(double));
+    printf("%d\n",num);
+    return 0;
+}
