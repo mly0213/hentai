@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(void){
+    int n,f,c;//c语言语法规定，所有（局部）变量的定义都要在代码块的最前面定义
+    printf("若要将华氏温度转为摄氏温度请扣1，若要将摄氏温度转为华氏温度请扣2\n");
+    scanf("%d",&n);
+    if (n==1) {
+        printf("请输入华氏温度：\n");
+        scanf("%d",&f);
+        c=5*(f-32)/9;
+        printf("华氏温度=%d，摄氏温度=%d\n",f,c);
+    }else if (n==2){
+        printf("请输入摄氏温度：\n");
+        scanf("%d",&c);
+        f=(9*c+160)/5;
+        printf("摄氏温度=%d，华氏温度=%d\n",c,f);
+    }else{
+        printf("！！！错误！！！");
+    }
+    return 0;
+}
