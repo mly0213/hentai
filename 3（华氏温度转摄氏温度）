@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void){
+    int c,f;
+    printf("请输入华氏温度：\n");
+    scanf("%d",&f);/*调用scanf函数可以输入数据，需要在变量名前加上&*/
+    c=5*(f-32)/9;
+    printf("华氏温度=%d,摄氏温度=%d\n",f,c);//在第一个%d的位置输出第一个变量f，第二个%d的位置输出第二个变量c（%d即表示变量的位置，需要一一对应）
+    return 0;
+}
