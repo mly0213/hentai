@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include<string.h>
+int main(void){
+    char arr1[]="abc";//用字符的数组可以存储字符串——用“”框定的内容（可以是任意，甚至是空字符串“”）
+    //"abc"———'a','b','c','\0'———‘\0’是字符串的结束标志（自动放入）
+    char arr2[]={'a','b','c'};//用{}可以分开存放字符——用‘’框定的单个字符
+    //在数组arr2的后面加上0或者'\0'(主动加入结束标志，防止出现乱码），此时arr2——‘a’,'b','c','\0'
+    printf("%s\n",arr1);
+    printf("%s\n",arr2);
+    printf("%d\n",strlen(arr1));//需要再引用string.h的头文件
+    printf("%d\n",strlen(arr2));
+    return 0;
+}
